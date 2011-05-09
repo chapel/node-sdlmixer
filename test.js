@@ -1,8 +1,6 @@
-var sdlmixer = require("./build/default/node-sdlmixer"),
-         sys = require("sys"),
-        puts = sys.puts;
-
-puts(sdlmixer.hello);
-sdlmixer.play("./wavs/alarm.wav");
-sdlmixer.play("./wavs/alarm.wav");
+var SDL = require("./build/default/node-sdlmixer").SDL,
+    player = new SDL();
+    
+player.play("./wavs/alarm.wav");
+player.play("./wavs/alarm.wav");
 
